@@ -1,15 +1,17 @@
 <meta charset="UTF-8">
 <script src="https://unpkg.com/vue"></script>
 
-<div id="app">
-    <h1>{{ aula }}</h1>
-    <h2>{{ modulo }}</h2>
-    <button @click="alterarAula">Alterar Aula</button>
-    <button @click="alterarModulo">Alterar Módulo</button>
-</div>
-
+<div id="app"></div>
 <script>
     const vm = new Vue ({
+        template:`
+            <div id="app">
+                <h1>{{ aula }}</h1>
+                <h2>{{ modulo }}</h2>
+                <button @click="alterarAula">Alterar Aula</button>
+                <button @click="alterarModulo">Alterar Módulo</button>
+            </div>
+            `,
         data: {
             aula: 'Montando Instância Vue',
             modulo: 'Módulo: Instância Vue'
